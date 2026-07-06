@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Gallery | Rise Coaching Institute</title>
+    <meta name="description" content="Take a visual tour of Rise Coaching Institute: explore our classrooms, celebrations, student achievements, and outdoor activities.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Scroll Progress Indicator -->
+    <div id="scroll-progress"></div>
+
+    <!-- Sticky Navigation Header -->
+    <header id="header-nav" class="scrolled">
+        <div class="container nav-container">
+            <a href="index.html" class="logo" id="logo-link">
+                <div class="logo-emblem">
+                    <svg class="logo-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+                        <!-- Sun Rays (Gold) -->
+                        <g stroke="var(--accent)" stroke-width="3" stroke-linecap="round">
+                            <line x1="50" y1="50" x2="50" y2="20" />
+                            <line x1="50" y1="50" x2="28" y2="28" />
+                            <line x1="50" y1="50" x2="72" y2="28" />
+                            <line x1="50" y1="50" x2="18" y2="42" />
+                            <line x1="50" y1="50" x2="82" y2="42" />
+                        </g>
+                        <!-- Rising Sun Center (Gold) -->
+                        <path d="M28 50 A22 22 0 0 1 72 50 Z" fill="var(--accent)" />
+                        <!-- Open Book (Navy/Primary color) -->
+                        <path d="M50 78 C32 68, 16 71, 10 75 L10 53 C16 49, 32 46, 50 56 Z" fill="var(--primary)" />
+                        <path d="M50 78 C68 68, 84 71, 90 75 L90 53 C84 49, 68 46, 50 56 Z" fill="var(--primary)" />
+                        <!-- Page Fold Center Split -->
+                        <line x1="50" y1="56" x2="50" y2="78" stroke="var(--bg-primary)" stroke-width="2" />
+                    </svg>
+                </div>
+                <div class="logo-text">
+                    <span class="logo-title">RISE COACHING</span>
+                    <span class="logo-subtitle"><span class="logo-line"></span>INSTITUTE<span class="logo-line"></span></span>
+                    <span class="logo-tagline">Reaching Innovative System In Education</span>
+                </div>
+            </a>
+            
+            <nav class="nav-menu" id="nav-menu-bar">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link">About Us</a>
+                <a href="courses.html" class="nav-link">Courses</a>
+                <a href="facilities.html" class="nav-link">Facilities</a>
+                <a href="results.html" class="nav-link">Achievements</a>
+                <a href="gallery.html" class="nav-link active">Gallery</a>
+                <a href="contact.html" class="nav-link">Contact Us</a>
+            </nav>
+
+            <div class="nav-actions">
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+                    <i class="fa-solid fa-moon moon-icon"></i>
+                    <i class="fa-solid fa-sun sun-icon"></i>
+                </button>
+                <a href="contact.html" class="btn btn-primary">Enquire Now</a>
+            </div>
+
+            <button class="hamburger" id="hamburger-toggle" aria-label="Open mobile menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Breadcrumb / Inner Header -->
+    <section class="section section-bg" style="padding-top: 140px; padding-bottom: 4rem; text-align: center;">
+        <div class="container">
+            <span class="tag-badge">Our Visual Moments</span>
+            <h1 style="font-size: 3rem; font-weight: 800; margin-top: 0.5rem; letter-spacing: -1px;">Photo Gallery</h1>
+            <p style="color: var(--text-secondary); margin-top: 0.5rem;"><a href="index.html">Home</a> &nbsp;/&nbsp; Gallery</p>
+        </div>
+    </section>
+
+    <!-- Filter Buttons & Full Grid -->
+    <section class="section">
+        <div class="container">
+            <div class="gallery-filters">
+                <button class="filter-btn active" data-filter="all">All Photos</button>
+                <button class="filter-btn" data-filter="classroom">Classroom Lectures</button>
+                <button class="filter-btn" data-filter="celebration">Celebrations</button>
+                <button class="filter-btn" data-filter="outdoor">Outdoor Moments</button>
+            </div>
+            
+            <div class="gallery-grid" id="full-gallery-pane">
+                <!-- Photo 1 (Classroom 1) -->
+                <div class="gallery-item" data-category="classroom" style="display: block; opacity: 1;">
+                    <img src="assets/images/classroom_teaching_1.png" alt="Mathematics Whiteboard Session" loading="lazy">
+                    <div class="gallery-overlay">
+                        <span>Classroom Lectures</span>
+                        <h4>Concepts Analysis Session</h4>
+                    </div>
+                    <div class="gallery-icon-overlay"><i class="fa-solid fa-expand"></i></div>
+                </div>
+
+                <!-- Photo 2 (Outdoor) -->
+                <div class="gallery-item" data-category="outdoor" style="display: block; opacity: 1;">
+                    <img src="assets/images/group_paa_roti.jpg" alt="Students Outside Cafe" loading="lazy">
+                    <div class="gallery-overlay">
+                        <span>Outdoor Moments</span>
+                        <h4>Rise Student Meet Outside Paa Roti Cafe</h4>
+                    </div>
+                    <div class="gallery-icon-overlay"><i class="fa-solid fa-expand"></i></div>
+                </div>
+
+                <!-- Photo 3 (Classroom 2) -->
+                <div class="gallery-item" data-category="classroom" style="display: block; opacity: 1;">
+                    <img src="assets/images/classroom_teaching_2.png" alt="Whiteboard Study Class" loading="lazy">
+                    <div class="gallery-overlay">
+                        <span>Classroom Lectures</span>
+                        <h4>Formula Analysis and Doubt Solving</h4>
+                    </div>
+                    <div class="gallery-icon-overlay"><i class="fa-solid fa-expand"></i></div>
+                </div>
+
+                <!-- Photo 4 (Celebration) -->
+                <div class="gallery-item" data-category="celebration" style="display: block; opacity: 1;">
+                    <img src="assets/images/group_celebration.jpg" alt="Topper Student Celebration" loading="lazy">
+                    <div class="gallery-overlay">
+                        <span>Celebrations</span>
+                        <h4>Mock Test Toppers Award Ceremony</h4>
+                    </div>
+                    <div class="gallery-icon-overlay"><i class="fa-solid fa-expand"></i></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-grid">
+            <div class="footer-col">
+                <div class="footer-logo">
+                    <div class="logo">
+                        <div class="logo-emblem">
+                            <svg class="logo-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+                                <g stroke="var(--accent)" stroke-width="3" stroke-linecap="round">
+                                    <line x1="50" y1="50" x2="50" y2="20" />
+                                    <line x1="50" y1="50" x2="28" y2="28" />
+                                    <line x1="50" y1="50" x2="72" y2="28" />
+                                    <line x1="50" y1="50" x2="18" y2="42" />
+                                    <line x1="50" y1="50" x2="82" y2="42" />
+                                </g>
+                                <path d="M28 50 A22 22 0 0 1 72 50 Z" fill="var(--accent)" />
+                                <path d="M50 78 C32 68, 16 71, 10 75 L10 53 C16 49, 32 46, 50 56 Z" fill="var(--primary)" />
+                                <path d="M50 78 C68 68, 84 71, 90 75 L90 53 C84 49, 68 46, 50 56 Z" fill="var(--primary)" />
+                                <line x1="50" y1="56" x2="50" y2="78" stroke="var(--bg-primary)" stroke-width="2" />
+                            </svg>
+                        </div>
+                        <div class="logo-text">
+                            <span class="logo-title">RISE COACHING</span>
+                            <span class="logo-subtitle"><span class="logo-line"></span>INSTITUTE<span class="logo-line"></span></span>
+                            <span class="logo-tagline">Reaching Innovative System In Education</span>
+                        </div>
+                    </div>
+                </div>
+
+                <p class="footer-desc">At Rise Coaching Institute, we are committed to providing premium education, concept-clearing lecture series, and structured doubt clearances for comprehensive success.</p>
+                <p class="footer-desc">© 2026 Rise Coaching Institute. All Rights Reserved.</p>
+            </div>
+            
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <div class="footer-links">
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About Us</a>
+                    <a href="courses.html">Our Courses</a>
+                    <a href="facilities.html">Facilities</a>
+                    <a href="results.html">Achievements</a>
+                    <a href="gallery.html">Gallery</a>
+                    <a href="contact.html">Contact Us</a>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h4>Programs</h4>
+                <div class="footer-links">
+                    <a href="courses/foundation.html">Foundation (6-10)</a>
+                    <a href="courses/cbse.html">CBSE Board Exam</a>
+                    <a href="courses/science.html">11th-12th Science</a>
+                    <a href="courses/commerce.html">11th-12th Commerce</a>
+                    <a href="courses/jee.html">JEE Mains & Advanced</a>
+                    <a href="courses/neet.html">NEET Medical</a>
+                    <a href="courses/cuet.html">CUET Prep</a>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h4>Office Contacts</h4>
+                <div class="footer-links" style="gap:1rem;">
+                    <div class="footer-contact-item">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <span>Times Square, 111, Gaurav Path Road, near Global Gajera School, Pal Gam, Surat, Gujarat 394510</span>
+                    </div>
+                    <div class="footer-contact-item">
+                        <i class="fa-solid fa-building"></i>
+                        <span>2nd Floor, Above Paa Roti Cafe, Near Railway Ticket Booking, Latur, Maharashtra 413512</span>
+                    </div>
+                    <div class="footer-contact-item">
+                        <i class="fa-solid fa-phone"></i>
+                        <span>
+                            Surat: <a href="tel:+919265425940">+91 92654 25940</a><br>
+                            Latur: <a href="tel:+918005996534">+91 80059 96534</a>
+                        </span>
+                    </div>
+                    <div class="footer-contact-item">
+                        <i class="fa-solid fa-envelope"></i>
+                        <span><a href="mailto:info@risecoachinginstitute.in">info@risecoachinginstitute.in</a></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="container footer-bottom">
+            <span>Designed & Developed with Passion for Educational Excellence.</span>
+            <div class="footer-bottom-links">
+                <a href="#" style="margin-right:1rem;">Privacy Policy</a>
+                <a href="#">Terms & Conditions</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Action Widgets -->
+    <div class="floating-widget-bar">
+        <a href="https://wa.me/919265425940?text=Hello%20Rise%20Coaching%20Institute%2C%20I%20am%20interested%20in%20admission%20details." class="float-action-btn float-whatsapp" target="_blank" aria-label="Chat on WhatsApp">
+            <i class="fa-brands fa-whatsapp"></i>
+        </a>
+        <a href="#" class="float-action-btn float-scroll-top" aria-label="Scroll back to top">
+            <i class="fa-solid fa-chevron-up"></i>
+        </a>
+    </div>
+
+    <!-- Main Module Script -->
+    <script type="module" src="/main.js"></script>
+</body>
+</html>
